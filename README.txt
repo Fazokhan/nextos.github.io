@@ -1,33 +1,19 @@
-Helios by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# NextOS Website
 
+This is the official website for NextOS, a custom Android ROM based on HyperOS, founded by Faizan Khan (aka FAZO). The site is hosted on GitHub Pages at `https://fazokhan.github.io/nextos.github.io`.
 
-This is Helios, a brand new site template for HTML5 UP. It's clean, modern, and designed
-to take advantage of larger (well, wider) displays while still being capable of gracefully
-scaling down to fit all manner of smaller ones.
+## Features
+- Information about NextOS and its HyperOS-based features.
+- Download links for supported devices (Redmi Note 11, Poco F3, Redmi 10C, Redmi Note 9 Pro, Redmi Note 13).
+- Installation guide and community links.
 
-Demo images* courtesy of Michael Domaradzki, an awesome photographer I met over at
-deviantART. Check out his portfolio here:
+## Setup
+1. Clone the repository: `git clone https://github.com/fazokhan/nextos.github.io.git`
+2. Host on GitHub Pages using the `main` branch.
+3. Access the site at `https://fazokhan.github.io/nextos.github.io`.
 
-http://md.photomerchant.net/
+## Contributing
+Join our community on [Telegram](https://t.me/RedmiN11Pak) or [GitHub Discussions](https://github.com/fazokhan/nextos.github.io/discussions) to contribute or get support.
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Michaels's work without his explicit permission!)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Michael Domaradzki (md.photomerchant.net)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+## License
+&copy; 2025 NextOS. Built by [Faizan Khan](https://t.me/FaxoKhan).
