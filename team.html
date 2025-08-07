@@ -2,48 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Team - NextOS</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextOS Team</title>
+  <link rel="stylesheet" href="assist/css/style.css" />
+  <link rel="icon" type="image/png" href="assist/images/logo.png" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <div class="loader">🌸 Gathering Waifus... </div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assist/images/logo.png" alt="NextOS Logo">
+      <span>NextOS</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="devices.html">Devices</a>
+      <a class="active" href="team.html">Team</a>
+    </nav>
+  </header>
 
-  <main class="content hidden">
-    <header class="hero">
-      <h1>Our Core Team</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="devices.html">Devices</a>
-        <a href="team.html">Team</a>
-      </nav>
-    </header>
+  <section class="hero center-text">
+    <h1 class="reveal-top">Meet Our Team</h1>
+    <p class="reveal-top">Behind every great OS, there’s a great team.</p>
+  </section>
 
-    <section class="team-grid">
-      <div class="team-card">
-        <img src="assets/images/owner.png" alt="Owner">
-        <h3>FaZo (Owner)</h3>
-      </div>
-      <div class="team-card">
-        <img src="assets/images/jia.png" alt="Co-Owner">
-        <h3>Jia (Co-Owner)</h3>
-      </div>
-      <div class="team-card">
-        <img src="assets/images/rix.png" alt="Rix">
-        <h3>Rix</h3>
-      </div>
-    </section>
-  </main>
+  <section class="team-grid">
+    <div class="team-card reveal-left">
+      <img src="assist/images/owner.png" alt="Owner">
+      <h3>FaZo</h3>
+      <p>Owner & Lead Dev</p>
+    </div>
+    <div class="team-card reveal-bottom">
+      <img src="assist/images/co-owner.png" alt="Co-Owner">
+      <h3>Dexter</h3>
+      <p>Co-Owner</p>
+    </div>
+    <div class="team-card reveal-right">
+      <img src="assist/images/rix.png" alt="Rix">
+      <h3>Rix</h3>
+      <p>UI/UX Designer</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>Made with 🍙 by Team NextOS</p>
+  <footer class="footer">
+    <p>&copy; 2025 NextOS. All rights reserved.</p>
   </footer>
 
   <script>
-    window.addEventListener("load", () => {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector(".content").classList.remove("hidden");
-    });
+    ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '50px', duration: 1000, delay: 100 });
+    ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '50px', duration: 1000, delay: 100 });
+    ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '50px', duration: 1000, delay: 100 });
+    ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '50px', duration: 1000, delay: 100 });
   </script>
 </body>
 </html>

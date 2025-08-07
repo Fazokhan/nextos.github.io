@@ -4,34 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NextOS - Home</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assist/style.css">
+  <link rel="icon" href="assist/images/logo.png">
 </head>
 <body>
-  <div class="loader">🔧 Booting NextOS...</div>
+  <!-- Loading animation -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
-  <main class="content hidden">
-    <header class="hero">
-      <img src="assets/images/logo.png" alt="NextOS Logo" class="logo" />
-      <h1>Welcome to <span class="highlight">NextOS</span></h1>
-      <p class="subtitle">A custom ROM built for speed, security, and anime power ⚡</p>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="devices.html">Devices</a>
-        <a href="team.html">Team</a>
-      </nav>
-    </header>
-  </main>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <img src="assist/images/logo.png" alt="NextOS Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero reveal">
+    <h1>Welcome to <span>NextOS</span></h1>
+    <p>A powerful, clean, and feature-rich custom ROM</p>
+    <a href="devices.html" class="btn">Explore Devices</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features reveal">
+    <div class="feature-card">
+      <h3>Performance</h3>
+      <p>Optimized for smoothness, stability, and battery efficiency.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Privacy</h3>
+      <p>Built with security and privacy-first features out of the box.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Customization</h3>
+      <p>Unlock deep customization and design control with ease.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
+    <p>&copy; 2025 NextOS. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Show loading screen
+    // Loader animation
     window.addEventListener("load", () => {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector(".content").classList.remove("hidden");
+      document.getElementById("loader").style.display = "none";
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
     });
   </script>
 </body>

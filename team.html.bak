@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Team - NextOS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="loader">🌸 Gathering Waifus... </div>
+
+  <main class="content hidden">
+    <header class="hero">
+      <h1>Our Core Team</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
+
+    <section class="team-grid">
+      <div class="team-card">
+        <img src="assets/images/owner.png" alt="Owner">
+        <h3>FaZo (Owner)</h3>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/jia.png" alt="Co-Owner">
+        <h3>Jia (Co-Owner)</h3>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/rix.png" alt="Rix">
+        <h3>Rix</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 🍙 by Team NextOS</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

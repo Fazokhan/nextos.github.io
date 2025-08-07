@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Devices - NextOS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="loader">📱 Loading Devices...</div>
+
+  <main class="content hidden">
+    <header class="hero">
+      <h1>Supported Devices</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
+
+    <section class="device-grid">
+      <div class="device">Spes<br><span>Redmi Note 11</span></div>
+      <div class="device">Alioth<br><span>POCO F3</span></div>
+      <div class="device">Fog<br><span>Redmi Note 13</span></div>
+      <div class="device">Miatoll<br><span>Redmi Note 9 Pro</span></div>
+      <div class="device">Star<br><span>Xiaomi 11 Ultra</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ by Team NextOS</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

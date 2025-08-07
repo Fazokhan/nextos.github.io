@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextOS - Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="loader">🔧 Booting NextOS...</div>
+
+  <main class="content hidden">
+    <header class="hero">
+      <img src="assets/images/logo.png" alt="NextOS Logo" class="logo" />
+      <h1>Welcome to <span class="highlight">NextOS</span></h1>
+      <p class="subtitle">A custom ROM built for speed, security, and anime power ⚡</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Show loading screen
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

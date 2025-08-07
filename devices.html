@@ -2,41 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Devices - NextOS</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextOS - Supported Devices</title>
+  <link rel="stylesheet" href="assist/css/style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <div class="loader">📱 Loading Devices...</div>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
 
-  <main class="content hidden">
-    <header class="hero">
-      <h1>Supported Devices</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="devices.html">Devices</a>
-        <a href="team.html">Team</a>
-      </nav>
-    </header>
+  <header class="nav-header">
+    <div class="logo">Next<span>OS</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="devices.html" class="active">Devices</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="device-grid">
-      <div class="device">Spes<br><span>Redmi Note 11</span></div>
-      <div class="device">Alioth<br><span>POCO F3</span></div>
-      <div class="device">Fog<br><span>Redmi Note 13</span></div>
-      <div class="device">Miatoll<br><span>Redmi Note 9 Pro</span></div>
-      <div class="device">Star<br><span>Xiaomi 11 Ultra</span></div>
-    </section>
-  </main>
+  <section class="hero dark-hero devices-hero">
+    <h1>Supported Devices</h1>
+    <p>Find your device and get started with NextOS.</p>
+  </section>
 
-  <footer>
-    <p>Built with ❤️ by Team NextOS</p>
+  <section class="devices-grid reveal">
+    <!-- Sample device card -->
+    <div class="device-card">
+      <img src="assist/img/spes.png" alt="Redmi Note 11" />
+      <h3>Redmi Note 11</h3>
+      <a href="#">Download</a>
+    </div>
+    <div class="device-card">
+      <img src="assist/img/lisa.png" alt="Mi 11 Lite NE" />
+      <h3>Mi 11 Lite NE</h3>
+      <a href="#">Download</a>
+    </div>
+    <!-- Add more device-card blocks below -->
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
   </footer>
 
   <script>
+    // Loader
     window.addEventListener("load", () => {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector(".content").classList.remove("hidden");
+      document.querySelector(".loader-wrapper").style.display = "none";
     });
+
+    // Scroll Reveal
+    ScrollReveal({ 
+      distance: '40px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: false 
+    }).reveal('.reveal', { interval: 100 });
   </script>
 </body>
 </html>

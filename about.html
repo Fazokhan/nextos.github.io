@@ -2,37 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - NextOS</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assist/css/style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <div class="loader">🌀 Powering up About Page...</div>
+  <div class="loader"></div>
 
-  <main class="content hidden">
-    <header class="hero">
-      <h1>About <span class="highlight">NextOS</span></h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="devices.html">Devices</a>
-        <a href="team.html">Team</a>
-      </nav>
-    </header>
+  <header>
+    <a href="index.html" class="logo">Next<span>OS</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="devices.html">Devices</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </header>
 
-    <section class="about-text">
-      <p>NextOS is a clean, fast, and anime-themed custom ROM project. We blend performance, stability, and UI aesthetics to bring you a truly next-gen Android experience.</p>
-      <p>Built by enthusiasts, for enthusiasts 💖</p>
-    </section>
-  </main>
+  <section class="about-hero">
+    <h1>About NextOS</h1>
+    <p>Experience the future of Android customization with NextOS – sleek, powerful, and tailored for you.</p>
+  </section>
+
+  <section class="about-content">
+    <div class="about-card" id="vision">
+      <h2>🌟 Our Vision</h2>
+      <p>We aim to provide a minimal yet powerful experience on Android with anime-themed aesthetics, performance tweaks, and a responsive dev team. Born from the passion of enthusiasts for enthusiasts.</p>
+    </div>
+    <div class="about-card" id="features">
+      <h2>🚀 Key Features</h2>
+      <ul>
+        <li>⚡ Lag-free animations</li>
+        <li>🎨 Custom themes and UI elements</li>
+        <li>🧠 AI-enhanced features</li>
+        <li>🔒 Enhanced privacy and security</li>
+      </ul>
+    </div>
+    <div class="about-card" id="why">
+      <h2>💡 Why Choose NextOS?</h2>
+      <p>Because it’s made by users like you, for users like you. NextOS isn’t just a ROM—it’s a movement. Join our mission to redefine Android, the NextOS way.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 NextOS Project.</p>
+    <p>&copy; 2025 NextOS | Built with ❤️ for the Android community</p>
+    <div class="footer-icons">
+      <a href="#"><img src="assist/img/logo.png" alt="Logo" /></a>
+    </div>
   </footer>
 
   <script>
+    const loader = document.querySelector(".loader");
     window.addEventListener("load", () => {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector(".content").classList.remove("hidden");
+      loader.classList.add("hidden");
+    });
+
+    ScrollReveal().reveal(".about-card", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "30px",
+      reset: false
     });
   </script>
 </body>
