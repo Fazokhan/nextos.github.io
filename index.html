@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTOS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <span class="logo-text">NEXT<span class="os">OS</span></span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="dropdown-menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#devices">Devices</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="about" class="about">
+            <div class="container">
+                <div class="logo-background">
+                    <img src="assets/images/logo.png" alt="NEXTOS Logo" class="logo-bg-img">
+                </div>
+                <div class="section-title">
+                    <h2>About NEXTOS</h2>
+                    <p>NEXTOS is a cutting-edge operating system built on HyperOS, delivering free ROMs with rich customization inspired by AOSP ROMs. Designed for exceptional stability, it ensures reliable performance across devices. With a focus on performance optimization, NEXTOS provides a smooth, responsive experience, minimizing lag and maximizing efficiency for demanding applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="devices" class="devices">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Supported Devices</h2>
+                    <p>Explore the devices officially supported by NEXTOS.</p>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Redmi Note 11</h3>
+                        <p>Enhanced performance and visuals with NEXTOS.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Redmi Note 9 Pro</h3>
+                        <p>Powerful hardware optimized for NEXTOS.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Redmi 10C</h3>
+                        <p>Affordable excellence with NEXTOS customization.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Redmi Note 13</h3>
+                        <p>Next-gen features with seamless NEXTOS integration.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Xiaomi 11 Ultra</h3>
+                        <p>Premium flagship experience with NEXTOS.</p>
+                    </div>
+                    <div class="grid-item">
+                        <span class="device-emoji">📱</span>
+                        <h3>Poco F3</h3>
+                        <p>High-speed performance tailored for NEXTOS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Team</h2>
+                    <p>Meet the dedicated team behind NEXTOS.</p>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item team-member">
+                        <img src="assets/images/owner.png" alt="Faizan Khan" class="team-img">
+                        <h3>Faizan Khan (FAZO)</h3>
+                        <p>Owner</p>
+                    </div>
+                    <div class="grid-item team-member">
+                        <img src="assets/images/co-owner.png" alt="Jia" class="team-img">
+                        <h3>Jia</h3>
+                        <p>Developer</p>
+                    </div>
+                    <div class="grid-item team-member">
+                        <img src="assets/images/rix.png" alt="Rix" class="team-img">
+                        <h3>Rix</h3>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Download NEXTOS</h2>
+                    <p>Get the latest NEXTOS ROMs for your device. Join our Telegram channel for download links and installation guides.</p>
+                </div>
+                <div class="download-button-container">
+                    <a href="https://t.me/nextos" target="_blank" class="download-button">Visit Telegram for Downloads</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <a href="https://t.me/nextos" target="_blank">
+                <img src="assets/images/telegram.png" alt="Telegram" class="telegram-icon">
+            </a>
+            <p>Download and get updates on Telegram</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle dropdown menu
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.dropdown-menu').classList.toggle('active');
+        });
+
+        // Fade-in on scroll
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
