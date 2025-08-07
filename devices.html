@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextOS - Supported Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1a1a1a;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #00ffff;
+    }
+
+    .device-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .device-card {
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00ffff55;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .device-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff99;
+    }
+
+    .device-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    .footer {
+      background-color: #121212;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+
+    .footer img {
+      width: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+
+    .footer img:hover {
+      transform: scale(1.2);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>📱 Supported Devices - NextOS</header>
+
+<section class="device-grid">
+  <div class="device-card"><div class="device-name">Redmi Note 11 (spes)</div></div>
+  <div class="device-card"><div class="device-name">Redmi K40 / Poco F3 (alioth)</div></div>
+  <div class="device-card"><div class="device-name">Redmi Note 13</div></div>
+  <div class="device-card"><div class="device-name">Redmi Note 9 Pro</div></div>
+  <div class="device-card"><div class="device-name">Xiaomi 11 Ultra (fog)</div></div>
+</section>
+
+<div class="footer">
+  <p>Follow us on:</p>
+  <a href="https://t.me/NextOSUpdates"><img src="images/telegram.png" alt="Telegram"></a>
+  <a href="https://github.com/NextOS-Roms"><img src="images/github.png" alt="GitHub"></a>
+</div>
+
+</body>
+</html>

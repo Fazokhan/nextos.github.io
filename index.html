@@ -1,210 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NextOS - A Custom ROM by FAZO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0d0d0d;
-      --fg: #ffffff;
-      --accent: #00ccff;
-      --card-bg: #1a1a1a;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--card-bg);
-      text-align: center;
-      padding: 40px 20px;
-      border-bottom: 2px solid var(--accent);
-    }
-
-    header img {
-      max-height: 100px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 20px 0 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: var(--accent);
-    }
-
-    .flex-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 20px;
-      border-radius: 15px;
-      width: 240px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
-    }
-
-    .card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin: 10px 0 5px;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    .socials {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .socials a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    .socials a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #999;
-      border-top: 2px solid #333;
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        width: 90%;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      section h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextOS - Custom Android ROM</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" />
 </head>
 <body>
-
   <header>
-    <img src="images/project_logo.png" alt="NextOS Logo">
-    <h1>Welcome to NextOS</h1>
-    <p>Custom ROM Project by FAZO & Team</p>
+    <img src="images/logo.png" alt="NextOS Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="devices.html">Devices</a>
+      <a href="team.html">Team</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>Our Team</h2>
-    <div class="flex-grid">
-      <div class="card">
-        <img src="images/owner.png" alt="Faizan Khan">
-        <h3>Faizan Khan</h3>
-        <p>aka FAZO – Owner</p>
-      </div>
-      <div class="card">
-        <img src="images/co-owner.png" alt="Jia">
-        <h3>Jia</h3>
-        <p>Co-Owner</p>
-      </div>
-      <div class="card">
-        <img src="images/rix.png" alt="Rix">
-        <h3>Rix</h3>
-        <p>Telegram & GitHub Handler</p>
-      </div>
-    </div>
+  <section class="hero">
+    <h1 class="hero-title">Welcome to <span>NextOS</span></h1>
+    <p class="hero-subtitle">Your next stop for clean, fast, and optimized Android ROMs</p>
+    <a href="devices.html" class="cta-button">View Supported Devices</a>
   </section>
 
-  <section>
-    <h2>Supported Devices</h2>
-    <div class="flex-grid">
-      <div class="card">
-        <h3>Spes</h3>
-        <p>by Fazo</p>
-      </div>
-      <div class="card">
-        <h3>Fog</h3>
-        <p>by Ishan</p>
-      </div>
-      <div class="card">
-        <h3>Alioth</h3>
-        <p>by Guffy</p>
-      </div>
-      <div class="card">
-        <h3>Redmi Note 9 Pro</h3>
-        <p>by Obito</p>
-      </div>
-      <div class="card">
-        <h3>Xiaomi 11 Ultra</h3>
-        <p>by Jia</p>
-      </div>
+  <section class="features">
+    <div class="feature">
+      <img src="images/performance.png" alt="Performance" />
+      <h3>Performance</h3>
+      <p>Lightweight and tuned for the best speed on every device.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Follow Us</h2>
-    <div class="socials">
-      <a href="https://t.me/RedmiN11Pak" target="_blank">📢 Main Telegram Channel</a><br><br>
-      <a href="https://t.me/SSgroupRN11" target="_blank">📸 Screenshot Channel</a>
+    <div class="feature">
+      <img src="images/stability.png" alt="Stability" />
+      <h3>Stability</h3>
+      <p>Tested across various devices for maximum reliability.</p>
+    </div>
+    <div class="feature">
+      <img src="images/ui.png" alt="UI" />
+      <h3>Clean UI</h3>
+      <p>Anime-inspired, minimal, and beautiful user interface.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 NextOS. All rights reserved. Built with ❤️ by FAZO & Team.
+    <p>&copy; 2025 NextOS. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://t.me/Fazo404"><img src="images/telegram.png" alt="Telegram" /></a>
+      <a href="https://github.com/fazokhan"><img src="images/github.png" alt="GitHub" /></a>
+    </div>
   </footer>
-
 </body>
 </html>

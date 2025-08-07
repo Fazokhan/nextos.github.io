@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About NextOS</title>
-    <meta name="description" content="Learn about NextOS, a custom Android ROM based on HyperOS, founded by Faizan Khan (FAZO).">
-    <meta name="keywords" content="NextOS, HyperOS, custom ROM, Android, Faizan Khan, FAZO">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | NextOS</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00bcd4;
+    }
+
+    .container p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #cccccc;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      border-top: 1px solid #333;
+    }
+
+    .social-icons img {
+      width: 32px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <h1>NextOS</h1>
-            <p>A HyperOS-based custom ROM for ultimate performance and customization</p>
-            <a href="index.html#downloads" class="btn">Get NextOS</a>
-        </div>
-    </header>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html#home">Home</a>
-            <a href="index.html#features">Features</a>
-            <a href="index.html#devices">Devices</a>
-            <a href="index.html#downloads">Downloads</a>
-            <a href="index.html#community">Community</a>
-            <a href="about.html">About</a>
-        </div>
-    </nav>
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About NextOS</h2>
-                <p>NextOS is a custom Android ROM built on the foundation of <strong>HyperOS</strong>, delivering unmatched stability, reliability, and performance. Our goal is to provide a bloat-free, customizable, and secure Android experience that empowers users to unlock their device’s full potential.</p>
-                <p>Founded by <strong>Faizan Khan</strong>, known as <strong>FAZO</strong> in the community, NextOS is a passion project driven by innovation and user satisfaction. Whether you’re a power user or a casual enthusiast, NextOS is designed for you.</p>
-                <p>Connect with Faizan on Telegram: <a href="https://t.me/FaxoKhan" class="btn">@FaxoKhan</a></p>
-                <p>Join our community to stay updated and contribute!</p>
-                <div class="community-links">
-                    <a href="https://t.me/RedmiN11Pak" class="btn">Telegram</a>
-                    <a href="https://github.com/fazokhan/nextos.github.io/discussions" class="btn">GitHub Discussions</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 NextOS. Built with ❤️ by <a href="https://t.me/FaxoKhan">Faizan Khan (FAZO)</a>.</p>
-        </div>
-    </footer>
-    <script src="assets/js/script.js"></script>
+  <header>About NextOS</header>
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>
+      NextOS is a custom Android ROM project built for performance, stability, and aesthetics. Inspired by the best in the ROM community, we aim to deliver a refined and innovative experience for supported devices.
+    </p>
+    <p>
+      Our core team is committed to open-source principles and transparent development. We strive to make every build better than the last and bring useful features to enhance everyday mobile use.
+    </p>
+  </div>
+  <footer>
+    <div class="social-icons">
+      <a href="https://t.me/nextos" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
+      <a href="https://github.com/fazokhan/nextos.github.io" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+    </div>
+    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
+  </footer>
 </body>
 </html>
