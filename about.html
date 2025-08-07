@@ -2,88 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | NextOS</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    body {
-      background-color: #121212;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 40px 20px;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .container h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #00bcd4;
-    }
-
-    .container p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #cccccc;
-    }
-
-    footer {
-      background-color: #1f1f1f;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-      border-top: 1px solid #333;
-    }
-
-    .social-icons img {
-      width: 32px;
-      margin: 0 10px;
-      vertical-align: middle;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <title>About - NextOS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>About NextOS</header>
-  <div class="container">
-    <h2>Our Mission</h2>
-    <p>
-      NextOS is a custom Android ROM project built for performance, stability, and aesthetics. Inspired by the best in the ROM community, we aim to deliver a refined and innovative experience for supported devices.
-    </p>
-    <p>
-      Our core team is committed to open-source principles and transparent development. We strive to make every build better than the last and bring useful features to enhance everyday mobile use.
-    </p>
-  </div>
+  <div class="loader">🌀 Powering up About Page...</div>
+
+  <main class="content hidden">
+    <header class="hero">
+      <h1>About <span class="highlight">NextOS</span></h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
+
+    <section class="about-text">
+      <p>NextOS is a clean, fast, and anime-themed custom ROM project. We blend performance, stability, and UI aesthetics to bring you a truly next-gen Android experience.</p>
+      <p>Built by enthusiasts, for enthusiasts 💖</p>
+    </section>
+  </main>
+
   <footer>
-    <div class="social-icons">
-      <a href="https://t.me/nextos" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
-      <a href="https://github.com/fazokhan/nextos.github.io" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-    </div>
-    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
+    <p>&copy; 2025 NextOS Project.</p>
   </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
 </body>
 </html>

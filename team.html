@@ -2,147 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team - NextOS</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .team-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .team-card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-    }
-
-    .team-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #00ffcc;
-    }
-
-    .name {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .role {
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-bottom: 1rem;
-    }
-
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .links img {
-      width: 24px;
-      vertical-align: middle;
-      transition: transform 0.2s ease;
-    }
-
-    .links img:hover {
-      transform: scale(1.2);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #111;
-      margin-top: 3rem;
-      color: #888;
-    }
-
-    .footer-links img {
-      width: 28px;
-      margin: 0 10px;
-      vertical-align: middle;
-      transition: transform 0.2s ease;
-    }
-
-    .footer-links img:hover {
-      transform: scale(1.2);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="loader">🌸 Gathering Waifus... </div>
 
-  <header>
-    <h1>Meet Our Team</h1>
-    <p>Passionate developers and maintainers of NextOS</p>
-  </header>
+  <main class="content hidden">
+    <header class="hero">
+      <h1>Our Core Team</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
 
-  <section class="team-container">
-    <div class="team-card">
-      <img src="images/fazo.png" alt="Fazo">
-      <div class="name">Fazo</div>
-      <div class="role">Founder & Lead Dev</div>
-      <div class="links">
-        <a href="https://t.me/Fazo404" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
-        <a href="https://github.com/Fazo404" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+    <section class="team-grid">
+      <div class="team-card">
+        <img src="assets/images/owner.png" alt="Owner">
+        <h3>FaZo (Owner)</h3>
       </div>
-    </div>
-
-    <div class="team-card">
-      <img src="images/jia.png" alt="Jia">
-      <div class="name">Jia</div>
-      <div class="role">Co-owner</div>
-      <div class="links">
-        <a href="https://t.me/jia" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
-        <a href="https://github.com/jia" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      <div class="team-card">
+        <img src="assets/images/jia.png" alt="Co-Owner">
+        <h3>Jia (Co-Owner)</h3>
       </div>
-    </div>
-
-    <div class="team-card">
-      <img src="images/rix.png" alt="Rix">
-      <div class="name">Rix</div>
-      <div class="role">Co-owner</div>
-      <div class="links">
-        <a href="https://t.me/rix" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
-        <a href="https://github.com/rix" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      <div class="team-card">
+        <img src="assets/images/rix.png" alt="Rix">
+        <h3>Rix</h3>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <div class="footer-links">
-      <a href="https://t.me/nextosgroup" target="_blank"><img src="images/telegram.png" alt="Telegram"></a>
-      <a href="https://github.com/Fazo404" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-    </div>
-    <p>© 2025 NextOS. All rights reserved.</p>
+    <p>Made with 🍙 by Team NextOS</p>
   </footer>
 
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
 </body>
 </html>

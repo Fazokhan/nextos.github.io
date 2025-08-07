@@ -2,52 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NextOS - Custom Android ROM</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="images/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextOS - Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="NextOS Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="devices.html">Devices</a>
-      <a href="team.html">Team</a>
-    </nav>
-  </header>
+  <div class="loader">🔧 Booting NextOS...</div>
 
-  <section class="hero">
-    <h1 class="hero-title">Welcome to <span>NextOS</span></h1>
-    <p class="hero-subtitle">Your next stop for clean, fast, and optimized Android ROMs</p>
-    <a href="devices.html" class="cta-button">View Supported Devices</a>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <img src="images/performance.png" alt="Performance" />
-      <h3>Performance</h3>
-      <p>Lightweight and tuned for the best speed on every device.</p>
-    </div>
-    <div class="feature">
-      <img src="images/stability.png" alt="Stability" />
-      <h3>Stability</h3>
-      <p>Tested across various devices for maximum reliability.</p>
-    </div>
-    <div class="feature">
-      <img src="images/ui.png" alt="UI" />
-      <h3>Clean UI</h3>
-      <p>Anime-inspired, minimal, and beautiful user interface.</p>
-    </div>
-  </section>
+  <main class="content hidden">
+    <header class="hero">
+      <img src="assets/images/logo.png" alt="NextOS Logo" class="logo" />
+      <h1>Welcome to <span class="highlight">NextOS</span></h1>
+      <p class="subtitle">A custom ROM built for speed, security, and anime power ⚡</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="devices.html">Devices</a>
+        <a href="team.html">Team</a>
+      </nav>
+    </header>
+  </main>
 
   <footer>
-    <p>&copy; 2025 NextOS. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://t.me/Fazo404"><img src="images/telegram.png" alt="Telegram" /></a>
-      <a href="https://github.com/fazokhan"><img src="images/github.png" alt="GitHub" /></a>
-    </div>
+    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Show loading screen
+    window.addEventListener("load", () => {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector(".content").classList.remove("hidden");
+    });
+  </script>
 </body>
 </html>
