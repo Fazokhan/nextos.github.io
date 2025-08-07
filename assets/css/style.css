@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+:root {
+    --bg-color: #111111; /* NextOS dark background */
+    --text-color: #cccccc; /* NextOS light text */
+    --highlight-color: #2487ce; /* Blue highlight */
+    --hover-color: #3194db; /* Blue hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Progress Bar */
+.wenprogress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 3px;
+}
+
+.neon {
+    display: block;
+    width: 0;
+    height: inherit;
+    background: var(--highlight-color);
+    transition: width 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background: rgba(17, 17, 17, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 997;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(36, 135, 206, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-size: 35px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.1);
+}
+
+.logo-text .os {
+    color: var(--highlight-color);
+}
+
+.mobile-nav-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    color: var(--highlight-color);
+    line-height: 0;
+    transition: 0.5s;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 30px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar li:hover > a {
+    color: var(--highlight-color);
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-mobile.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background: var(--bg-color);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.navbar-mobile.active ul {
+    transform: translateY(0);
+}
+
+.navbar-mobile a {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--text-color);
+    display: block;
+}
+
+.navbar-mobile a:hover {
+    color: var(--highlight-color);
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 140px 20px;
+    margin: 100px auto;
+    position: relative;
+    min-height: 300px;
+}
+
+.about,
+.download {
+    /* No fade effect for About and Download */
+}
+
+section:not(.about):not(.download) {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section:not(.about):not(.download):in-viewport {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom viewport detection with :in-viewport pseudo-class emulation */
+@supports not (-webkit-hyphens: none) {
+    section:not(.about):not(.download) {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        section:not(.about):not(.download) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.section-title p {
+    font-size: 14px;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About and Download Section Background */
+.logo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.logo-bg-img {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    filter: blur(20px);
+}
+
+/* Stack View for Devices and Team */
+.stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.stack-item {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 0.5s forwards;
+}
+
+.stack-item:nth-child(1) { animation-delay: 0s; }
+.stack-item:nth-child(2) { animation-delay: 0.1s; }
+.stack-item:nth-child(3) { animation-delay: 0.2s; }
+.stack-item:nth-child(4) { animation-delay: 0.3s; }
+.stack-item:nth-child(5) { animation-delay: 0.4s; }
+.stack-item:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio-item,
+.testimonial-item {
+    background: #2b2535;
+    border: 3px solid var(--highlight-color);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.stack-container:hover .portfolio-item,
+.stack-container:hover .testimonial-item {
+    transform: scale(1.02);
+}
+
+.portfolio-item h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.portfolio-item p {
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+}
+
+.testimonial-item .testimonial-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #fff;
+}
+
+.testimonial-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 10px 0;
+}
+
+.testimonial-item p {
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+}
+
+/* Animation for Team Images */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Download Section */
+.download .section-title p a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.download .section-title p a:hover {
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--bg-color);
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--highlight-color);
+}
+
+footer .container {
+    display: block;
+}
+
+.telegram-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.15);
+}
+
+footer .copyright {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .navbar {
+        display: none;
+        order: 3;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar.navbar-mobile {
+        display: block;
+    }
+
+    .logo-text {
+        font-size: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 100px 20px;
+        margin: 50px auto;
+    }
+
+    .about .logo-bg-img,
+    .download .logo-bg-img {
+        width: 80%;
+        max-width: 300px;
+        filter: blur(15px);
+    }
+
+    .portfolio-item h5,
+    .testimonial-item h3 {
+        font-size: 16px;
+    }
+
+    .portfolio-item p,
+    .testimonial-item h4,
+    .testimonial-item p {
+        font-size: 14px;
+    }
+
+    .stack-item {
+        height: 280px;
+    }
+}
