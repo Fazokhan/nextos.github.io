@@ -2,58 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NextOS Team</title>
-  <link rel="stylesheet" href="assist/css/style.css" />
-  <link rel="icon" type="image/png" href="assist/images/logo.png" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team - NextOS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="assist/images/logo.png" alt="NextOS Logo">
-      <span>NextOS</span>
-    </div>
+  <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="devices.html">Devices</a>
-      <a class="active" href="team.html">Team</a>
+      <img src="assets/images/logo.png" alt="NextOS Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero center-text">
-    <h1 class="reveal-top">Meet Our Team</h1>
-    <p class="reveal-top">Behind every great OS, there’s a great team.</p>
-  </section>
-
-  <section class="team-grid">
-    <div class="team-card reveal-left">
-      <img src="assist/images/owner.png" alt="Owner">
-      <h3>FaZo</h3>
-      <p>Owner & Lead Dev</p>
-    </div>
-    <div class="team-card reveal-bottom">
-      <img src="assist/images/co-owner.png" alt="Co-Owner">
-      <h3>Dexter</h3>
-      <p>Co-Owner</p>
-    </div>
-    <div class="team-card reveal-right">
-      <img src="assist/images/rix.png" alt="Rix">
-      <h3>Rix</h3>
-      <p>UI/UX Designer</p>
+  <section class="team-section">
+    <h1>Meet the Team</h1>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/images/owner.png" alt="Fazo" />
+        <h2>@Fazo404</h2>
+        <p>Founder & Lead Dev</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/co-owner.png" alt="Member" />
+        <h2>@DevBuddy</h2>
+        <p>Kernel Dev</p>
+      </div>
+      <!-- Add more members as needed -->
     </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 NextOS. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 NextOS | All rights reserved</p>
   </footer>
 
-  <script>
-    ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '50px', duration: 1000, delay: 100 });
-    ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '50px', duration: 1000, delay: 100 });
-    ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '50px', duration: 1000, delay: 100 });
-    ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '50px', duration: 1000, delay: 100 });
-  </script>
+  <script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>

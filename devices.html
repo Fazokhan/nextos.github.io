@@ -3,65 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NextOS - Supported Devices</title>
-  <link rel="stylesheet" href="assist/css/style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Devices - NextOS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="loader-wrapper">
-    <div class="loader"></div>
-  </div>
-
-  <header class="nav-header">
-    <div class="logo">Next<span>OS</span></div>
+  <header>
     <nav>
+      <img src="assets/images/logo.png" alt="NextOS Logo" class="logo" />
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="devices.html" class="active">Devices</a></li>
         <li><a href="team.html">Team</a></li>
+        <li><button id="themeToggle">🌙</button></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero dark-hero devices-hero">
+  <section class="device-grid">
     <h1>Supported Devices</h1>
-    <p>Find your device and get started with NextOS.</p>
-  </section>
-
-  <section class="devices-grid reveal">
-    <!-- Sample device card -->
     <div class="device-card">
-      <img src="assist/img/spes.png" alt="Redmi Note 11" />
-      <h3>Redmi Note 11</h3>
-      <a href="#">Download</a>
+      <img src="assets/images/devices/spes.jpg" alt="Spes" />
+      <h2>Redmi Note 11 (spes)</h2>
     </div>
     <div class="device-card">
-      <img src="assist/img/lisa.png" alt="Mi 11 Lite NE" />
-      <h3>Mi 11 Lite NE</h3>
-      <a href="#">Download</a>
+      <img src="assets/images/devices/lisa.jpg" alt="Lisa" />
+      <h2>Xiaomi 11 Lite NE (lisa)</h2>
     </div>
-    <!-- Add more device-card blocks below -->
+    <!-- Add more devices as needed -->
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 NextOS Project. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 NextOS | All rights reserved</p>
   </footer>
 
-  <script>
-    // Loader
-    window.addEventListener("load", () => {
-      document.querySelector(".loader-wrapper").style.display = "none";
-    });
-
-    // Scroll Reveal
-    ScrollReveal({ 
-      distance: '40px',
-      duration: 1000,
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      reset: false 
-    }).reveal('.reveal', { interval: 100 });
-  </script>
+  <script src="assets/js/theme-toggle.js"></script>
 </body>
 </html>
