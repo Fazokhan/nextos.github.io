@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
+
+:root {
+    --bg-color: #111111; /* NextOS dark background */
+    --text-color: #cccccc; /* NextOS light text */
+    --highlight-color: #2487ce; /* Blue highlight */
+    --hover-color: #3194db; /* Blue hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Progress Bar */
+.wenprogress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 3px;
+}
+
+.neon {
+    display: block;
+    width: 0;
+    height: inherit;
+    background: var(--highlight-color);
+    transition: width 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background: rgba(17, 17, 17, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 997;
+    padding: 5px 0; /* Reduced padding to minimize gap */
+    box-shadow: 0 2px 5px rgba(36, 135, 206, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-size: 35px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.1);
+}
+
+.logo-text .os {
+    color: var(--highlight-color);
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 60px; /* Reduced padding to minimize gap */
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* About Section */
+.about .logo-background img {
+    opacity: 0.3;
+}
+
+.section-title {
+    position: absolute;
+    top: 40%; /* Adjusted to center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px; /* Increased for better text fit */
+    text-align: center; /* Ensured centered text */
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-title p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center; /* Ensured centered paragraphs */
+}
+
+.section-title ul {
+    list-style-position: inside;
+    text-align: left; /* Left-aligned list items within centered container */
+    font-size: 14px;
+    padding-left: 0;
+    margin: 0 auto; /* Centered within container */
+    max-width: 500px; /* Limited width for readability */
+}
+
+.section-title ul li {
+    margin-bottom: 10px;
+}
+
+/* Card Container for Devices and Team */
+.card-container {
+    position: absolute;
+    bottom: 15%; /* Adjusted for better spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 90%;
+}
+
+.card-item {
+    width: 180px;
+    height: 250px;
+    background: #2b2535;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #fff;
+    text-align: center; /* Centered card text */
+}
+
+.portfolio-item p {
+    font-size: 12px;
+    color: #999;
+    text-align: center; /* Centered card text */
+}
+
+.testimonial-item .testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.testimonial-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 0 3px 0;
+    color: #fff;
+    text-align: center; /* Centered card text */
+}
+
+.testimonial-item h4 {
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 6px 0;
+    text-align: center; /* Centered card text */
+}
+
+.testimonial-item p {
+    font-size: 12px;
+    color: #999;
+    text-align: center; /* Centered card text */
+}
+
+/* Animation for Team Images */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* About Text for Devices and Team */
+.about-text {
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: right; /* Right-aligned for consistency */
+}
+
+/* About and Download Section Background */
+.logo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.logo-bg-img {
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    filter: blur(15px);
+}
+
+.download .logo-background img {
+    opacity: 0.3;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--bg-color);
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid var(--highlight-color);
+}
+
+footer .container {
+    display: block;
+}
+
+.telegram-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    transition: transform 0.3s;
+}
+
+.telegram-icon:hover {
+    transform: scale(1.15);
+}
+
+footer .copyright {
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .logo-text {
+        font-size: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .section-title ul {
+        font-size: 12px;
+        max-width: 400px;
+    }
+
+    .section-title {
+        width: 90%;
+    }
+
+    .card-container {
+        bottom: 10%;
+        gap: 10px;
+        width: 95%;
+    }
+
+    .card-item {
+        width: 150px;
+        height: 200px;
+    }
+
+    .about-text {
+        top: 5%;
+        right: 10px;
+        font-size: 10px;
+    }
+
+    .about .logo-bg-img,
+    .download .logo-bg-img {
+        width: 70%;
+        max-width: 250px;
+        filter: blur(10px);
+    }
+
+    header {
+        padding: 3px 0; /* Further reduced for mobile */
+    }
+
+    main {
+        padding-top: 50px; /* Further reduced for mobile */
+    }
+}
