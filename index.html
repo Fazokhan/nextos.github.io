@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEXTOS</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Blue neon progress bar -->
+  <div id="wenprogressbar" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <div class="logo">NEXT<span class="os">OS</span></div>
+
+      <nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul id="nav-menu" class="nav-links" aria-hidden="true">
+          <li><a href="#about">About</a></li>
+          <li><a href="#devices">Devices</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main (snap container) -->
+  <main class="snap-container">
+
+    <!-- About (with blurred logo background + zoom) -->
+    <section id="about" class="snap-section has-bg">
+      <div class="bg-layer"><img src="assets/images/logo.png" alt="NEXTOS logo background" class="logo-bg-img"></div>
+      <div class="section-inner fade-card">
+        <h1>About NEXTOS</h1>
+        <p>NEXTOS is a lightweight, fast and secure custom ROM focused on performance and user control. Minimal bloat, frequent updates and a clean UI.</p>
+      </div>
+    </section>
+
+    <!-- Highlights / Features -->
+    <section id="features" class="snap-section">
+      <div class="section-inner">
+        <h1 class="fade-card">Highlights</h1>
+        <div class="features-grid">
+          <div class="feature-card fade-card">
+            <h3>Performance</h3>
+            <p>Optimized for smooth responsiveness and low latency.</p>
+          </div>
+          <div class="feature-card fade-card">
+            <h3>Privacy</h3>
+            <p>Security-first approach, minimal telemetry and timely patches.</p>
+          </div>
+          <div class="feature-card fade-card">
+            <h3>Customization</h3>
+            <p>Useful tweaks and theming without unnecessary clutter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devices (Resurrected-style cards) -->
+    <section id="devices" class="snap-section">
+      <div class="section-inner">
+        <h1 class="fade-card">Supported Devices</h1>
+        <div class="devices-list">
+          <article class="device-card fade-card">
+            <img src="assets/images/devices/device1.png" alt="Device 1">
+            <h3>Device 1</h3>
+            <p>Flagship build — stable & fast</p>
+          </article>
+
+          <article class="device-card fade-card">
+            <img src="assets/images/devices/device2.png" alt="Device 2">
+            <h3>Device 2</h3>
+            <p>Reliable midrange support</p>
+          </article>
+
+          <article class="device-card fade-card">
+            <img src="assets/images/devices/device3.png" alt="Device 3">
+            <h3>Device 3</h3>
+            <p>Lightweight build for older phones</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team (Resurrected-style cards) -->
+    <section id="team" class="snap-section">
+      <div class="section-inner">
+        <h1 class="fade-card">Meet the Team</h1>
+        <div class="team-grid">
+          <div class="team-member fade-card">
+            <img src="assets/images/owner.png" alt="Faizan Khan (FAZO)">
+            <h4>Faizan Khan</h4>
+            <p>Owner (FAZO)</p>
+          </div>
+
+          <div class="team-member fade-card">
+            <img src="assets/images/co-owner.png" alt="Obito">
+            <h4>Obito</h4>
+            <p>Co-owner & Lead Developer</p>
+          </div>
+
+          <div class="team-member fade-card">
+            <img src="assets/images/jia.png" alt="Jia">
+            <h4>Jia</h4>
+            <p>Project Manager</p>
+          </div>
+
+          <div class="team-member fade-card">
+            <img src="assets/images/rix.png" alt="Rix">
+            <h4>Rix</h4>
+            <p>Web Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download (with blurred logo background + zoom) -->
+    <section id="download" class="snap-section has-bg">
+      <div class="bg-layer"><img src="assets/images/logo.png" alt="NEXTOS logo background" class="logo-bg-img"></div>
+      <div class="section-inner fade-card">
+        <h1>Download NEXTOS</h1>
+        <p>Download the latest stable or beta build for your device.</p>
+        <a class="download-btn" href="#">Download</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 NEXTOS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
